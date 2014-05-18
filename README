@@ -37,6 +37,8 @@ Command Line Options
 Espeakup currently accepts the following command line options:
 
   --default-voice=voice, -V voice	Set default voice.
+  --rate-multiplier=multiplier, -m multiplier	Set rate multiplier.
+  --rate-offset=offset, -o offset	Set rate offset.
   --debug, -d				Debug mode (stay in the foreground).
   --help, -h				Show this help.
   --version, -v				Display the software version.

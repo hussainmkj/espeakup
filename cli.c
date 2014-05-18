@@ -30,11 +30,17 @@ extern char *pidPath;
 /* default voice */
 extern char *defaultVoice;
 
+/* rate multiplier and offset */
+extern int rateMultiplier;
+extern int rateOffset;
+
 /* command line options */
-const char *shortOptions = "P:V:adhv";
+const char *shortOptions = "P:V:adhmov";
 const struct option longOptions[] = {
 	{"pid-path", required_argument, NULL, 'P'},
 	{"default-voice", required_argument, NULL, 'V'},
+	{"rate-multiplier", required_argument, NULL, 'm'},
+	{"rate-offset", required_argument, NULL, 'o'},
 	{"acsint", no_argument, NULL, 'a'},
 	{"debug", no_argument, NULL, 'd'},
 	{"help", no_argument, NULL, 'h'},
@@ -48,6 +54,8 @@ static void show_help()
 	printf("Options are as follows:\n");
 	printf("  --pid-path=path, -P path\t\tSet path for pid file.\n");
 	printf("  --default-voice=voice, -V voice\tSet default voice.\n");
+	printf("  --rate-multiplier=multiplier, -m multiplier\tSet multiplier used for adjusting rate.\n");
+	printf("  --rate-offset=multiplier, -m multiplier\tSet offset used for calculating rate.\n");
 	printf("  --debug, -d\t\t\t\tDebug mode (stay in the foreground).\n");
 	printf("  --help, -h\t\t\t\tShow this help.\n");
 	printf("  --version, -v\t\t\t\tDisplay the software version.\n");
@@ -88,6 +96,12 @@ void process_cli(int argc, char **argv)
 			break;
 		case 'h':
 			show_help();
+			break;
+		case 'm':
+			rateMultiplier = atoi(optarg);
+			break;
+		case 'o':
+			rateOffset = atoi(optarg);
 			break;
 		case 'v':
 			show_version();

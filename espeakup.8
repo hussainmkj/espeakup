@@ -15,6 +15,12 @@ espeakup \(em connect Speakup to the ESpeak TTS engine
 .B \-\^\-default-voice=voicename
 ]
 [
+.B \-\^\-rate-multiplier=multiplier
+]
+[
+.B \-\^\-rate-offset=offset
+]
+[
 .B \-\^\-debug
 ]
 [
@@ -30,6 +36,12 @@ Set the full path for the pid file espeakup uses when in daemon mode.
 .TP
 .B \-V voicename, \-\^\-default-voice=voicename
 Set the espeak voice to be used by default.
+.TP
+.B \-m multiplier, \-\^\-rate-multiplier=multiplier
+Set the multiplier to be used for adjusting rate.
+.TP
+.B \-o multiplier, \-\^\-rate-offset=offset
+Set the offset to be used for calculating rate.
 .TP
 .B \-d, \-\^\-debug
 run in the foreground, rather than becoming a daemon process.
