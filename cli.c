@@ -35,7 +35,7 @@ extern int rateMultiplier;
 extern int rateOffset;
 
 /* command line options */
-const char *shortOptions = "P:V:adhmov";
+const char *shortOptions = "P:V:m:o:adhv";
 const struct option longOptions[] = {
 	{"pid-path", required_argument, NULL, 'P'},
 	{"default-voice", required_argument, NULL, 'V'},
