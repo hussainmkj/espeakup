@@ -55,7 +55,7 @@ static void show_help()
 	printf("  --pid-path=path, -P path\t\tSet path for pid file.\n");
 	printf("  --default-voice=voice, -V voice\tSet default voice.\n");
 	printf("  --rate-multiplier=multiplier, -m multiplier\tSet multiplier used for adjusting rate.\n");
-	printf("  --rate-offset=multiplier, -m multiplier\tSet offset used for calculating rate.\n");
+	printf("  --rate-offset=offset, -o offset\tSet offset used for calculating rate.\n");
 	printf("  --debug, -d\t\t\t\tDebug mode (stay in the foreground).\n");
 	printf("  --help, -h\t\t\t\tShow this help.\n");
 	printf("  --version, -v\t\t\t\tDisplay the software version.\n");
